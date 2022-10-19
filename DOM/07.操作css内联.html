@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        /* 
+            通过style属性读取或修改的样式都是内联样式，无法读取样式表样式        
+        */
+        window.onload = function () {
+            var btn2 = document.getElementById("btn2");
+            var btn = document.getElementById("btn");
+            var box1 = document.getElementById("box1");
+            btn.onclick = function () {
+                box1.style.width = "400px";
+                box1.style.height = "400px";
+                box1.style.backgroundColor = "rgb(25, 255, 255)";
+                box1.style.transition = "all 2s";
+            };
+            btn2.onclick=function(){
+                // 读取box1的样式
+                alert(box1.style.width);
+                console.log(box1.style.width);
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <button id="btn">点我</button><br><br>
+    <div id="box1"></div>
+    <br>
+    <button id="btn2">点我2</button>
+</body>
+
+</html>

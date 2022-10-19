@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+           
+        */
+        function MyClass() {
+
+        }
+        MyClass.prototype.name = "我是原型中的名字";
+        var mc = new MyClass();
+        mc.age=18;
+        console.log(mc.name);
+        //    检查对象自身是否有该属性
+        // console.log(mc.hasOwnProperty("age"));
+        /* 
+           原型对象也是对象，所以它也有原型
+              当我们使用一个对象的属性方法时，会在自身去查找，其次在原型中查找，后在原型的原型里查找，直到Object对象的原型
+                 如果没有，返回undefined
+        */
+        // console.log(mc.__proto__.hasOwnProperty("hasOwnProperty"));
+        console.log(mc.__proto__.__proto__.hasOwnProperty("hasOwnProperty"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

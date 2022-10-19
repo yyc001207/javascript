@@ -1,0 +1,40 @@
+.inner {
+    width: 400px;
+    border: 1px solid;
+    margin: 20px auto;
+}
+
+.inner ul {
+    overflow: hidden;
+}
+
+.inner li {
+    float: left;
+    background-color: #99ff99;
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid;
+}
+.inner input{
+    margin: 10px 10px;
+}
+p {
+    margin: 5px 5px;
+}
+body{
+    position: relative;
+    max-width: 800px;
+}
+.main{
+    position: absolute;;
+    left: 400px;
+}
+.main2{
+    position: absolute;;
+    left:  820px;
+}
+
+button {
+    width: 300px;
+    margin-top: 15px;
+}

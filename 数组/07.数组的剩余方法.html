@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr = ["孙悟空", "猪悟能", "沙悟净"];
+        var arr2 = ["三太子", "显圣二郎", "老君"];
+        /* 
+           concat()连接数组
+            不会对原数组产生影响，结果返回值返回
+        */
+        var result = arr.concat(arr2);
+        /* 
+        join()
+        将数组转换为一个字符串
+          不影响原数组，结果返回值返回
+        */
+        var result = arr.join("");
+        console.log(result);
+        /* 
+          reverse()
+            反转数组
+        */
+        arr.reverse();
+        /* 
+        sort()
+        数组元素排序
+        根据返回值不同决定元素顺序
+        不同浏览器的标准不同
+        firefox
+           大于0，交换位置
+           小于0，不变
+           等于0，两值相等
+        chorme
+           与firefox相反
+        */
+        // arr = ["s", "g", "w", "d", "a", "b"];
+        // arr.sort();
+        arr = [5, 4,2,3,4,5,1,5,2];
+        arr.sort(function (a, b) {
+           return b-a;
+        });
+        console.log(arr);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

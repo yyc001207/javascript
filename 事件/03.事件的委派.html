@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            var allA = document.getElementsByTagName("a");
+            var u1 = document.getElementById("u1");
+            var onA = document.getElementsByClassName("link");
+            // for(var i=0;i<allA.length;i++){
+            //     allA[i].onclick=function(){
+            //         alert("原来的a");
+            //     };
+            // }
+            btn.onclick = function () {
+                var li = document.createElement("li");
+                li.innerHTML = "<a href='javascript:;' class='link'>新建超链接</a>"
+                u1.appendChild(li);
+            };
+            /* 
+               事件的委派
+                  事件统一绑定给元素的祖先元素，后代元素触发事件时会一直冒泡到祖先元素
+                  减少事件绑定次数
+            */
+            u1.onclick = function (event) {
+                // 触发事件的对象是期望对象执行
+                if (event.target.className == "link") {
+                    alert("121e4");
+                }
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <button id="btn">按钮</button>
+    <ul id="u1">
+        <li><a href="javascript:;" class="link">超链接1</a></li>
+        <li><a href="javascript:;" class="link">超链接2</a></li>
+        <li><a href="javascript:;" class="link">超链接3</a></li>
+    </ul>
+</body>
+
+</html>

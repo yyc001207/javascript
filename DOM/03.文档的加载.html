@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 浏览器在加载页面时，按照自上向下的顺序加载 -->
+    <script>
+        window.onload = function () {
+            var btn = document.getElementById("btn");
+            btn.onclick = function () {
+                alert("hello");
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <button id="btn">我是一个按钮</button>
+
+</body>
+
+</html>

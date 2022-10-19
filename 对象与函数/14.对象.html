@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj = {
+            name: "孙悟空",
+            age: 18,
+            gender: "男",
+            sayName: function () {
+                alert(this.name);
+            }
+        };
+
+        function createPerson(name,age,gender) {
+            var obj = {
+            name: name,
+            age: age,
+            gender: gender,
+            sayName:function(){
+                console.log(obj);
+            }
+        };
+          return obj;
+        }
+        var obj2 =new createPerson("猴子",12,"男");
+        obj2.sayName();
+        console.log(obj2);
+    </script>
+</head>
+
+<body>
+ 
+</body>
+
+</html>

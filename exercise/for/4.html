@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a, n = 0;
+        a = +prompt();
+        if (a <= 1) {
+            alert("不合法");
+        } else {
+            for (i =2; i <= a; i++) {
+                if (a % i == 0) {
+                    n++;
+                }
+            }
+            if (n <= 1) {
+                alert("质数")
+            } else {
+                alert("不是质数");
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

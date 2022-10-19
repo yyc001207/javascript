@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            /* 
+               上 38
+               下 40
+               左 37
+               右 39
+            */
+            var box1 = document.getElementById("box1");
+            document.onkeydown = function (event) {
+                var speed = 20;
+                if (event.shiftKey) {
+                    speed += 10;
+                }
+                console.log(speed);
+                var oldleft = parseInt(getStyle(box1, "left"));
+                var oldtop = parseInt(getStyle(box1, "top"));
+                switch (event.keyCode) {
+                    case 38:
+                        box1.style.top = oldtop - speed + "px";
+                        break;
+                    case 40:
+                        box1.style.top = oldtop + speed + "px";
+                        break;
+                    case 37:
+                        box1.style.left = oldleft - speed + "px";
+                        break;
+                    case 39:
+                        box1.style.left = oldleft + speed + "px";
+                        break;
+                }
+            }
+            function getStyle(obj, name) {
+                return getComputedStyle(obj, null)[name];
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div id="box1"></div>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            基本数据类型的数据，变量独立
+            对象属于复合数据类型，可以同时保存多个不同数据类型的属性
+                内建对象
+                  ES标准中的对象
+                宿主对象
+                  由运行环境提供的对象，主要是浏览器
+                  如BOM DOM
+                自定义对象
+                  开发人员创建的对象  
+        */
+        //    创建对象
+        /* 
+           使用new关键字调用的函数都是构造函数constructor
+              构造函数是专门用来创建对象的函数
+        */
+        var obj = new Object();
+        // console.log(typeof obj);
+        /* 
+           对象中的值称为属性
+           读取不存在的属性不会报错，返回undefined
+           属性值遵循就近原则
+        */
+        obj.name="孙悟空";
+        obj.age=18;
+        obj.gender="男";
+        // 属性删除
+        delete obj.name;
+        console.log(obj.name);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

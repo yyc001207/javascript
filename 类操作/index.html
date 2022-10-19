@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1 {
+            width: 100px;
+            height: 100px;
+            background-color: #bfa;
+        }
+
+        .b2 {
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var btn01 = document.getElementById("btn01");
+            var box = document.getElementById("box");
+            btn01.onclick = function () {
+                // addClass(box, "b2");
+                // removeClass(box, "b1");
+                toggleClass(box,"b2");
+            };
+        };
+        // 定义一个函数，用来向一个元素中添加指定的class属性值
+        /* 
+           参数：
+              obj 需要添加class的元素
+              cn class的值
+        */
+        function addClass(obj, cn) {
+            if (!hasClass(obj, cn)) {
+                obj.className += " " + cn;
+            }
+        }
+        function hasClass(obj, cn) {
+            var reg = new RegExp("\\b" + cn + "\\b");
+            return reg.test(obj.className);
+        }
+        function removeClass(obj, cn) {
+            var reg = new RegExp("\\s\\b" +cn + "\\b");
+            obj.className = obj.className.replace(reg, "");
+        }
+        /* 
+           切换一个类
+           元素中具有该类，则删除
+           元素中没有该类，则添加
+        */
+        function toggleClass(obj, cn) {
+            if(hasClass(obj,cn)){
+                removeClass(obj,cn);
+            }else{
+                addClass(obj,cn);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button id="btn01">点击按钮修改box样式</button>
+    <br><br>
+    <div id="box" class="b1"></div>
+</body>
+
+</html>

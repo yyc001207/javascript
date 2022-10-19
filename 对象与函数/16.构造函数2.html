@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+            在构造函数中为每个对象都添加了方法
+                目前我们的方法在构造函数内部创建，也就是构造函数每执行一次就会创建一个新的方法
+        */
+        function Person(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.sayName = fun;
+        }
+        function fun() {
+            alert(this.name);
+        };
+        var obj = new Person("猴子", 18, "男");
+        var obj2 = new Person("八戒", 18, "男");
+        obj.sayName();
+        obj2.sayName();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

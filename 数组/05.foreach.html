@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+           js中提供foEach()方法遍历数组       
+           需要一个函数作为参数 
+             由我们创建但不由我们调用的函数称为回调函数
+             数组中有几个元素函数就会执行几次，每次执行时，浏览器会将遍历的元素
+                以实参的形式传递进来，通过定义形参，读取内容
+             浏览器会传递三个参数
+                第一个参数，当前遍历的元素
+                第二个参数，当前遍历元素的索引
+                第三个元素，正在遍历的数组
+        */
+        var arr = ["孙悟空", "猪悟能", "沙悟净", "唐三藏"];
+
+        arr.forEach(function (a,b,c) {
+           console.log(a);
+           console.log(b);
+           console.log(c);
+        });
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

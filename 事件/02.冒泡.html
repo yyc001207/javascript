@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+        #s1{
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            var s1=document.getElementById("s1");
+            s1.onclick=function(){
+                alert("span");
+            };
+        };
+    </script>
+</head>
+
+<body>
+    <div id="box1">
+        我是div
+        <span id="s1">我是span</span>
+    </div>
+</body>
+
+</html>

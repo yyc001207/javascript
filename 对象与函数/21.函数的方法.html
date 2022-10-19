@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun() {
+            alert(this.name);
+        }
+        /* 
+          call() apply()
+          可以将一个对象指定为第一个参数
+        */
+       var obj={
+        name:"obj",
+        sayName:function(){
+            alert(this.name);
+        }
+       };
+       var obj2={
+        name:"obj2"
+       };
+        fun.call(obj);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

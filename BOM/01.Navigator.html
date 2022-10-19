@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+           BOM
+             浏览器对象模型 操作浏览器
+             Window 
+                浏览器整个窗口，网页的全局对象
+             Navigator
+                当前浏览器的信息，通过对象识别不同浏览器
+             Location
+                当前浏览器的地址栏信息，操作浏览器跳转页面
+             History
+                浏览器的历史记录
+                    由于隐私原因，不能获得具体的历史记录，操作浏览器向前或向后操作
+                    只在当次访问有效
+             Screen
+                用户屏幕信息，获取用户的显示器的相关信息
+            BOM对象作为window对象的属性保存
+                通过window对象使用，也可以直接使用
+        */
+       /* 
+         使用userAgent判断浏览器信息
+         火狐
+           Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0
+         Chrome
+           Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36
+         Edge
+           Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.5060.134 Safari/537.36 Edg/103.0.1264.71
+       */
+        console.log(navigator.userAgent);
+        if(/firefox/i.test(navigator.userAgent)){
+            alert("火狐浏览器");
+        }else if(/chrome/i.test(navigator.userAgent)){
+            alert("谷歌内核");
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

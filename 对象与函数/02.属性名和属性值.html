@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+           属性名
+              不强制要求遵守标识符规范，但建议遵守规范
+        */
+        var obj = new Object();
+        obj.name = "孙悟空";
+        obj.age = 18;
+        obj.gender = "男";
+        /* 
+          特殊属性名
+        */
+        obj["123"] = 789;
+        var n = "123";
+        /* console.log(obj["123"]);
+        console.log(obj[n]); */
+
+        /* 
+           属性值
+             任意数据类型
+        */
+        var obj2 = new Object();
+        obj2.name = "猪八戒";
+        obj.test = obj2;
+        console.log(obj.test.name);
+        /* 
+           in 运算符
+              检查对象中是否有制定的属性
+        */
+       console.log("test2" in obj);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

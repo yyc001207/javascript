@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        console.log(history.length);
+        window.onload=function(){
+            var btn1=document.getElementById("btn1");
+            btn1.onclick=function(){
+                // history.back();
+                // history.forward();
+                history.go(1);
+            };
+        };
+    </script>
+</head>
+<body>
+  <button id="btn1">按钮</button>
+  <a href="test02.html">去test02</a>
+</body>
+</html>

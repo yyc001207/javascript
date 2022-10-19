@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+
+        #box0 {
+            width: 400px;
+            height: 400px;
+            border: 1px solid #000;
+            margin: 20px auto;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            /* 
+               上 38
+               下 40
+               左 37
+               右 39
+            */
+            var box1 = document.getElementById("box1");
+
+            var speed = 10;
+            var dir = 0;
+            setInterval(function () {
+                var oldleft = parseInt(getStyle(box1, "left"));
+                var oldtop = parseInt(getStyle(box1, "top"));
+                console.log(speed);
+                switch (dir) {
+                    case 38:
+                        box1.style.top = oldtop - speed + "px";
+                        break;
+                    case 40:
+                        box1.style.top = oldtop + speed + "px";
+                        break;
+                    case 37:
+                        box1.style.left = oldleft - speed + "px";
+                        break;
+                    case 39:
+                        box1.style.left = oldleft + speed + "px";
+                        break;
+                }
+            }, 30);
+            document.onkeydown = function (event) {
+
+                if (event.shiftKey) {
+                    speed += 10;
+                }
+                dir = event.keyCode;
+            };
+            document.onkeyup = function () {
+                dir = 0;
+                speed = 10;
+            };
+            function getStyle(obj, name) {
+                return getComputedStyle(obj, null)[name];
+            }
+        };
+    </script>
+</head>
+
+<body>
+    <div id="box0">
+        <div id="box1">
+        </div>
+    </div>
+</body>
+
+</html>

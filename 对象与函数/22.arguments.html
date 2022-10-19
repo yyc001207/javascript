@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+           在调用时，浏览器会传递两个隐含的参数
+           1.函数的上下文对象this
+           2.封装实参的对象arguments
+               类数组对象，通过索引操作数据，也可以获取长度
+               调用函数时，传递的实参都在arguments中保存
+               属性callee
+                  对应一个函数对象，就是当前正在指向的函数对象
+        */
+        function fun() {
+            console.log(arguments.length);
+        }
+        fun("hello","true");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

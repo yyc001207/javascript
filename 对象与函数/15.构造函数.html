@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+           使用new关键字调用的函数称为构造函数
+           构造函数
+            1.立刻创建一个新的对象
+            2.将新建对象设置为函数中的this，在构造函数中可以使用this关键字引用新建的对象
+            3.逐行执行函数代码
+            4.新建对象作为返回值返回
+        */
+        function Person(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            this.sayName = function () {
+                console.log();
+            };
+        }
+        var obj = new Person("猴子", 18, "男");
+        obj.sayName();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

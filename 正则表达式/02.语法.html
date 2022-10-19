@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+          字面量创建正则表达式
+             var 变量 =/正则表达式/匹配模式
+             字面量更加简单
+             构造函数更灵活
+        */
+        //var reg=new RegExp();
+        var reg = /a/i;
+        reg = /a|b/i;
+        /* 
+        是否有字母
+        []表示或关系
+        */
+        reg = /[a-z]/;
+        /* 
+          检查字符串中是否有abc、adc、aec
+        */
+        reg = /a[bde]c/;
+        /* 
+          [^ ]除了
+        */
+       reg=/[^ab]/;
+        console.log(reg.test("abc"));
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

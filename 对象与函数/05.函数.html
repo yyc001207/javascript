@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+          函数function
+            函数也是一个对象
+            可以封装功能（代码），需要时可以执行
+            在需要时调用
+        */
+        // 创建函数
+        // 可以将封装代码以字符串形式传递给构造函数
+
+        //   var fun=new Function("console.log('hello');");
+        // 封装代码会在函数调用时执行
+        //   fun();
+        /* 
+          函数声明
+        */
+        function fun2() {
+            console.log(fun2);
+        }
+        fun2();
+        /* 函数表达式 */
+        var fun3 = function () {
+            console.log("匿名函数");
+        }
+        fun3();
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

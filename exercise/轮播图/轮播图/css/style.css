@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#outer {
+    width: 520px;
+    height: 281px;
+    margin: 50px auto;
+    background-color: #bfa;
+    padding: 10px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#imglist {
+    list-style: none;
+    position: absolute;
+}
+
+#imglist li {
+    float: left;
+    margin: 0 10px;
+}
+#imglist li img{
+    width: 500px;
+    height: 281px;
+}
+#navDiv {
+    position: absolute;
+    bottom: 15px;
+}
+
+#navDiv a {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: red;
+    float: left;
+    opacity: 0.5;
+}
+#navDiv a:hover{
+    background-color: black;
+}
